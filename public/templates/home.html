@@ -1,8 +1,79 @@
+<div class="title animated fadeInDown">
+
+    <h1 class="siteTitle"><strong>Wut Play</strong></h1>
+    <h3 class="siteDesc">Don't know what to play? We can help.</h3>
+
+</div>
+
+<div class="searchTerms">
 
 
-<div class="title">
+        <div class="searchBy animated fadeInLeft">
+            <span>What genre of game do you want to play?</span>
+            <select class="menuText" ng-model="params.genre">
 
-<h1 class="siteTitle">WutPlay</h1>
-<h3 class="siteDesc">Don't know what to play? We can help.</h3>
+
+                <option>Action</option>
+                <option>Adventure</option>
+                <option>Casual</option>
+                <option>Indie</option>
+                <option value="multiplayer">Massively Multiplayer</option>
+                <option>Racing</option>
+                <option>RPG</option>
+                <option>Simulation</option>
+                <option>Sports</option>
+                <option>Strategy</option>
+
+            </select>
+        </div>
+
+
+
+        <div class="searchBy animated fadeInUp">
+            <span>What price range are you looking for?</span>
+
+            <select class="menuText" ng-model="params.price">
+
+                <option selected="selected">.99 - 4.99</option>
+                <option>5.00 - 9.99</option>
+                <option>10.00 - 20.00</option>
+                <option>20.00 - 39.99</option>
+                <option>40.00+</option>
+            </select>
+        </div>
+
+
+
+        <div class="searchBy animated fadeInUp">
+            <span>What OS are you looking to play on?</span>
+
+            <select class="menuText" ng-model="params.os">
+
+                <option value="windows" selected>Windows</option>
+                <option value="mac">Mac</option>
+                <option value="linux">Linux</option>
+
+            </select>
+        </div>
+
+    <div class="searchBy animated fadeInRight">
+
+        <span>Want to play alone or with friends?</span>
+
+        <select class="menuText" ng-model="params.players">
+
+            <option value="singleplayer">Single Player</option>
+            <option value="multiplayer">Multiplayer</option>
+
+        </select>
+
+    </div>
+
+
+</div>
+
+<div class="submitSearch animated fadeInUpBig">
+
+    <button class="searchBtn animated fadeIn" ng-click="getGames(params)">Search</button>
 
 </div>

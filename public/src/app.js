@@ -9,5 +9,10 @@ angular.module('WutPlay', ['ui.router'])
                 url        : '/' ,
                 templateUrl: '../templates/home.html' ,
                 controller : 'mainCtrl'
-            } )
+            })
+            .state( 'results', {
+                url         : '/games',
+                templateUrl : '../templates/results.html',
+                controller  : 'resultsCtrl'
+            })
     });

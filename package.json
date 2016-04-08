@@ -22,6 +22,8 @@
     "cors": "^2.7.1",
     "express": "^4.13.4",
     "express-session": "^1.13.0",
-    "mongoose": "^4.4.11"
+    "mongoose": "^4.4.11",
+    "steam-store": "^0.4.1",
+    "steam-store-parser": "0.0.4"
   }
 }

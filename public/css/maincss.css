@@ -1,20 +1,26 @@
 * {
     box-sizing: border-box;
 }
-
-body {
+html {
     background: black; /* For browsers that do not support gradients */
     /*background: -webkit-radial-gradient(#000000, #434343); !* Safari 5.1 to 6.0 *!*/
     /*background: -o-radial-gradient(#000000, #434343); !* For Opera 11.6 to 12.0 *!*/
     /*background: -moz-radial-gradient(#000000, #434343); !* For Firefox 3.6 to 15 *!*/
-    /*background: radial-gradient(#000000, #434343); !* Standard syntax *!*/
+    background: radial-gradient(ellipse farthest-corner at center center, #000000, #303030); /* Standard syntax */
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+body {
+    background: inherit;
 }
 
 .wrapper {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    height: 100%;
+    justify-content: space-between;
+    height: 100vh;
     width: 100%;
 }
 
@@ -22,4 +28,50 @@ body {
     font-family: Chalkboard, sans-serif;
     color: white;
     align-self: center;
+    padding-top: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.siteTitle {
+    letter-spacing: 20px;
+}
+
+.searchTerms {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+}
+
+.searchBy {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 10em;
+    background-color: darkred;
+    color: white;
+    margin: 0 40px;
+    font-size: 25px;
+    border-radius: 50px;
+    padding: 10px;
+}
+
+.menuText {
+    font-size: 20px;
+    color: black;
+    width: 50%;
+}
+
+.submitSearch {
+    display: flex;
+    justify-content: center;
+}
+
+.searchBtn {
+    width: 200px;
+    height: 75px;
+    font-size: 30px;
 }

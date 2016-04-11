@@ -4,7 +4,7 @@ var  express = require('express'),
 	 mongoose = require('mongoose'),
 	 session = require('express-session'),
 	 cors = require('cors'),
-	 port = 9115,
+	 port = process.env.PORT || 9115,
 	 corsOptions = {
         origin: 'http://localhost:' + port
      },

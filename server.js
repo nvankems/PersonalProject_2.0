@@ -6,7 +6,7 @@ var  express = require('express'),
 	 cors = require('cors'),
 	 port = process.env.PORT || 9115,
 	 corsOptions = {
-        origin: 'http://localhost:' + port
+        origin: 'http://wutplay.herokuapp.com'
      },
      mongoUri = 'mongodb://nvankems8080:Di$torti0n@ds023000.mlab.com:23000/nvankems8080',
 	 SteamStore = require('steam-store');

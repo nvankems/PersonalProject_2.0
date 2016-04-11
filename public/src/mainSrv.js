@@ -1,6 +1,6 @@
 angular.module('WutPlay').service('mainSrv', function($http, $q) {
 
-    var bUrl = 'http://localhost:9115/api/getGames';
+    var bUrl = 'http://wutplay.herokuapp.com/api/getGames';
 
     this.getGames = function (params) {
         var dfd = $q.defer();

@@ -34,11 +34,11 @@
 
             <select class="menuText" ng-model="params.price">
 
-                <option selected="selected">.99 - 4.99</option>
-                <option>5.00 - 9.99</option>
-                <option>10.00 - 20.00</option>
-                <option>20.00 - 39.99</option>
-                <option>40.00+</option>
+                <option value="99-499" selected="selected">.99 - 4.99</option>
+                <option value="500-999">5.00 - 9.99</option>
+                <option value="1000-1999">10.00 - 19.99</option>
+                <option value="2000-3999">20.00 - 39.99</option>
+                <option value="4000-50000">40.00+</option>
             </select>
         </div>
 
@@ -75,5 +75,6 @@
 <div class="submitSearch animated fadeInUpBig">
 
     <button class="searchBtn animated fadeIn" ng-click="getGames(params)">Search</button>
+    <a href="http://steampowered.com"><h6>Powered by Steam</h6></a>
 
 </div>

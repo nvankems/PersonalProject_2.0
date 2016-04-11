@@ -1,17 +1,17 @@
 angular.module('WutPlay').controller('mainCtrl', function($scope, $rootScope, mainSrv, $state) {
     // setInterval(function () {
-    //     console.log($scope.genre)
+    //     console.log($scope.params.price)
     // }, 2000);
 
     $scope.getGames = function(params) {
         params.genre = params.genre.toLowerCase();
+        $state.go('snake');
         
-        console.log("Hello world!");
         
         mainSrv.getGames(params).then(function(res) {
             
             $rootScope.gameList = res;
-            console.log(res);
+            
             $state.go('results');
         })
 

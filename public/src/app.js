@@ -15,4 +15,9 @@ angular.module('WutPlay', ['ui.router'])
                 templateUrl : '../templates/results.html',
                 controller  : 'resultsCtrl'
             })
+            .state( 'snake', {
+                url: '/snake',
+                templateUrl: '../templates/snake.html',
+                controller: 'snakeCtrl'
+            })
     });

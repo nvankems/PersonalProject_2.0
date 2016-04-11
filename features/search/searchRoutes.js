@@ -20,18 +20,35 @@ module.exports = function (app) {
                 gamesOnly: true
             };
 
+            var priceRange = req.query.price.split('-');
+            
             parser(params, function(err, list){
                 if(err){ console.log(err); }
 
                 var app = Math.floor(Math.random() * (100 + 1));
 
+                console.log(list);
+
+                var store = new steamStore();
+
+
+                var gameToPlay = list[app].steamappId;
+
+
+                // console.log(store.steam( 'appDetails', gameToPlay));
+
+                store.steam( 'appDetails' , gameToPlay ).then( function ( results ) {
+
+                        return res.send( results );
+
+                });
                 
             // console.log(list);
             // console.log("total nb: " + list.length);
 
-            res.send( list );
+
         })
         })
 
     
-}
+};

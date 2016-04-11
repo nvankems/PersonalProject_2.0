@@ -22,22 +22,23 @@ mongoose.connection.once('open', function() {
 
 require('./features/search/searchRoutes.js')(app);
 
-var store = new SteamStore();
+// var store = new SteamStore();
+//
+// var searchTerm = 'Creed';
 
-var searchTerm = 'Creed';
 
 
-store.steam('storeSearch', 'Job Simulator').then(function (results) {
-	results = results.map(function (result) {
-		return result.id;
-	});
-	store.getProductsDetails(results).then(function (details) {
-		for (var i = 0; i < details.length; i++) {
-            console.log(details);
-        }
-		
-	});
-});
+// store.steam('storeSearch', 'Job Simulator').then(function (results) {
+// 	results = results.map(function (result) {
+// 		return result.id;
+// 	});
+// 	store.getProductsDetails(results).then(function (details) {
+// 		for (var i = 0; i < details.length; i++) {
+//             console.log(details);
+//         }
+//		
+// 	});
+// });
 
 // var parser = require('steam-store-parser');
 //

@@ -1,0 +1,15 @@
+.resultsContain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: "Press Start 2P", cursive;
+    margin-left: 25em;
+}
+
+.fa-arrow-circle-o-left {
+    color: white;
+    margin-top: 15px;
+    margin-left: 15px;
+}

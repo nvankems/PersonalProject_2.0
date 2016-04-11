@@ -5,18 +5,18 @@ angular.module('WutPlay').service('mainSrv', function($http, $q) {
     this.getGames = function (params) {
         var dfd = $q.defer();
         
-        console.log("Hello World");
         
-        $http.get(bUrl + '?tags=' + params.genre + '&os=' + params.os + '&players=' + params.players)
+        
+        $http.get(bUrl + '?tags=' + params.genre + '&os=' + params.os + '&players=' + params.players + '&price=' + params.price)
             .then(function(res, err) {
                 
                 if (err) {
                     dfd.reject(err);
                 }
 
-                console.log(res);
+                
                 dfd.resolve(res);
-                console.log("Wilson is cool");
+                
                 
                 
             });

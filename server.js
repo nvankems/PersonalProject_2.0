@@ -8,7 +8,7 @@ var  express = require('express'),
 	 corsOptions = {
         origin: 'http://localhost:' + port
      },
-     mongoUri = 'mongodb://localhost:27017/wutplay',
+     mongoUri = 'mongodb://nvankems8080:Di$torti0n@ds023000.mlab.com:23000/nvankems8080',
 	 SteamStore = require('steam-store');
 
 app.use(cors(corsOptions));

@@ -21,7 +21,6 @@ angular.module('WutPlay').service('mainSrv', function($http, $q) {
                 
             });
         
-        // console.log($http.get('http://localhost:9115/api/getGames?tags=platformer&os=windows&players=multiplayer'));
         return dfd.promise;
     }
     

@@ -26,25 +26,17 @@ module.exports = function (app) {
                 if(err){ console.log(err); }
 
                 var app = Math.floor(Math.random() * (100 + 1));
-
-                console.log(list);
-
+                
                 var store = new steamStore();
 
 
                 var gameToPlay = list[app].steamappId;
-
-
-                // console.log(store.steam( 'appDetails', gameToPlay));
 
                 store.steam( 'appDetails' , gameToPlay ).then( function ( results ) {
 
                         return res.send( results );
 
                 });
-                
-            // console.log(list);
-            // console.log("total nb: " + list.length);
 
 
         })
